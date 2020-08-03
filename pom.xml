@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lordgasmic</groupId>
-	<artifactId>parse-ultimate</artifactId>
+	<artifactId>==GIT_NAME==</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<description>Ultimate Parse Application</description>
+	<description>==SERVICE_NAME== Application</description>
 
 	<properties>
 		<java.version>1.8</java.version>

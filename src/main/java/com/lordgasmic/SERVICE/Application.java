@@ -1,12 +1,12 @@
-package com.lordgasmic.parse;
+package com.lordgasmic.==PACKAGE_NAME==;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UltimateParseApplication {
+public class ==APP_NAME==Application {
 
     public static void main(String... args) {
-        SpringApplication.run(UltimateParseApplication.class, args);
+        SpringApplication.run(==APP_NAME==Application.class, args);
     }
 }
