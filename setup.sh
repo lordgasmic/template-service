@@ -21,4 +21,4 @@ sed -i "s/==APP_NAME==/$APP_NAME/g" Application.java
 mv Application.java ${APP_NAME}Application.java
 
 # Goodbye, cruel world!
-rm -- $0
+rm -- "$0"
