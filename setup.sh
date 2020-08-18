@@ -5,8 +5,8 @@ echo " [1] - Web Service"
 echo " [2] - Repository Service"
 read -p "? " SERVICE_TYPE
 read -p "Service Name (Template Service): " SERVICE_NAME
-read -p "    Git Name (template-service): " GIT_NAME
-read -p "     App Name (TemplateService): " APP_NAME
+read -p "Git Name (template-service): " GIT_NAME
+read -p "App Name (TemplateService): " APP_NAME
 
 PACKAGE_NAME=${GIT_NAME//-}
 
@@ -22,7 +22,7 @@ if [ $SERVICE_TYPE == 1 ]; then
   rm -rf src/main/java/com/lordgasmic/repository
   sed -i "s/==REPOSITORY==//g" $FILES
   sed -i "s/==MYSQL==//g" $FILES
-else [ $SERVICE_TYPE == 2 ]; then
+elif [ $SERVICE_TYPE == 2 ]; then
   MVN_TXT=$(<config/repository.config)
   MYSQL_TXT=$(<config/mysql.config)
   sed -i "s/==REPOSITORY==/$MVN_TXT/g" $FILES
@@ -31,6 +31,7 @@ fi
 
 cd src/main/java/com/lordgasmic
 mv SERVICE $PACKAGE_NAME
+cd $PACKAGE_NAME
 mv Application.java ${APP_NAME}Application.java
 
 # Goodbye, cruel world!
