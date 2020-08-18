@@ -4,9 +4,9 @@ echo "Which type of service are you building?"
 echo " [1] - Web Service"
 echo " [2] - Repository Service"
 read -p "? " SERVICE_TYPE
-read -p "Service Name: " SERVICE_NAME
-read -p "Git Name: " GIT_NAME
-read -p "App Name: " APP_NAME
+read -p "Service Name (Template Service): " SERVICE_NAME
+read -p "    Git Name (template-service): " GIT_NAME
+read -p "     App Name (TemplateService): " APP_NAME
 
 PACKAGE_NAME=${GIT_NAME//-}
 
