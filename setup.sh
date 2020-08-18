@@ -29,6 +29,8 @@ elif [ $SERVICE_TYPE == 2 ]; then
   sed -i "s/==MYSQL==/$MYSQL_TXT/g" $FILES
 fi
 
+rm -rf config
+
 cd src/main/java/com/lordgasmic
 mv SERVICE $PACKAGE_NAME
 cd $PACKAGE_NAME
